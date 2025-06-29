@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf5;
+    color: #333;
+    text-align: center;
+    padding-top: 50px;
+}
+h1 {
+    color: #5c3d99;
+}
+form input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #5c3d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background-color: #4b2f7e;
+}
+a {
+    color: #5c3d99;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f3eaff;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td a {
+    color: red;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f9f9ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-grid label {
+    margin-top: 8px;
+}
+
+textarea, select, input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    grid-column: 2;
+    background-color: #5c3d99;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

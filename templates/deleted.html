@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Silindi</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>🗑️ Record deleted.</h2>
+    {% if entry %}
+        <p>You deleted the record named <strong>{{ entry.name|capitalize }}</strong>.</p>
+        <a href="/undo/{{ entry.id }}">↩️  Undo</a><br>
+    {% endif %}
+    <a href="/history">📜 Return to visitor list.</a>
+</body>
+</html>
+

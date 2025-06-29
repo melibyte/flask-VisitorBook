@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor Book</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📝 Visitor Book</h1>
+
+    <form action="/greet" method="POST" class="form-grid">
+        <label for="name">Your name:</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Email (optional)">
+
+        <label for="location">City / Country:</label>
+        <input type="text" name="location" placeholder="İstanbul, Türkiye">
+
+        <label for="subject">Topic:</label>
+        <input type="text" name="subject" placeholder="Message title">
+
+        <label for="message">Your message:</label>
+        <textarea name="message" rows="4" placeholder="Comment, suggestion, thought" required></textarea>
+
+        <label for="rating">Give a rating:</label>
+        <select name="rating">
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5" selected>⭐⭐⭐⭐⭐</option>
+        </select>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <p><a href="/history">📜 Visitor Registration</a></p>
+</body>
+</html>
+

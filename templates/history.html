@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor Book</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📜 Visitor Registration</h1>
+
+    {% if data %}
+    <table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City / Country</th>
+            <th>Topic</th>
+            <th>Comment</th>
+            <th>Point</th>
+            <th>Sent time</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entry in data %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ entry.name|capitalize }}</td>
+            <td>{{ entry.email }}</td>
+            <td>{{ entry.location }}</td>
+            <td>{{ entry.subject }}</td>
+            <td>{{ entry.message }}</td>
+            <td>
+                {% for i in range(entry.rating|int) %}
+                    ⭐
+                {% endfor %}
+            </td>
+            <td><small>{{ entry.timestamp }}</small></td>
+            <td><a href="/delete/{{ entry.id }}" onclick="return confirm('Are you sure you want to delete the record?')">❌</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+    {% else %}
+        <p>There are no records yet.</p>
+    {% endif %}
+
+    <a href="/">🔙 Home Page</a>
+</body>
+</html>
+
